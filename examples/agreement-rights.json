@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "participants": ["A", "B", "C"],
+  "pools": [
+    {"agreement": "G", "currency": "USD", "members": ["A", "B", "C"], "funding": {"A": 3, "B": 1, "C": 0}},
+    {"agreement": "H", "currency": "USD", "members": ["A", "C"], "funding": {"A": 0, "C": 2}}
+  ],
+  "obligations": [
+    {"id": "ab", "debtor": "A", "creditor": "B", "agreement": "G", "currency": "USD", "amount": 5, "eligible": true},
+    {"id": "ba", "debtor": "B", "creditor": "A", "agreement": "G", "currency": "USD", "amount": 2, "eligible": true},
+    {"id": "bc", "debtor": "B", "creditor": "C", "agreement": "G", "currency": "USD", "amount": 1, "eligible": false},
+    {"id": "ca", "debtor": "C", "creditor": "A", "agreement": "H", "currency": "USD", "amount": 2, "eligible": true}
+  ]
+}
