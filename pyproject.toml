@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: Apache-2.0
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "circulattice-core"
+version = "0.1.0.dev0"
+description = "Integer constrained multilateral netting and independent feasibility checks"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0 AND CC-BY-4.0"
+license-files = ["LICENSE", "LICENSES/CC-BY-4.0.txt"]
+dependencies = []
+
+[project.scripts]
+circulattice = "circulattice.__main__:main"
+
+[tool.setuptools]
+packages = ["circulattice"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["circulattice"]

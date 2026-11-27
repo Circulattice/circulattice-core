@@ -1,0 +1,6 @@
+# SPDX-License-Identifier: Apache-2.0
+# Tools for building, linting and type checking.
+build==1.6.1
+mypy==2.4.1
+ruff==0.17.6
+setuptools==84.2.1
